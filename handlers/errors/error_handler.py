@@ -14,7 +14,7 @@ async def errors_handler(update, exception):
     :return: stdout logging
     """
     if isinstance(exception, TelegramAPIError):
-        logger.exception(f'TelegramAPIError: {exception} \nUpdate: {update}')
+        logger.exception(f"TelegramAPIError: {exception} \nUpdate: {update}")
         return True
 
-    logger.exception(f'Update: {update} \n{exception}')
+    logger.exception(f"Update: {update} \n{exception}")
