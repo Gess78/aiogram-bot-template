@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  bot:
+    image: tg_bot-image
+    container_name: tg_bot-container
+    build:
+      context: .
+    working_dir: "/usr/src/app/tg_bot"
+    volumes:
+    - .:/usr/src/app/tg_bot
+    command: python3 -m app
+    restart: always
+    env_file:
+      - ".env"
