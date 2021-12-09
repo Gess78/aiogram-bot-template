@@ -1,8 +1,7 @@
+from aiogram import Dispatcher
 from loguru import logger
 
-from aiogram import Dispatcher
-
-from data.config import ADMINS
+from loader import ADMINS
 
 
 async def on_startup_notify(dp: Dispatcher):
